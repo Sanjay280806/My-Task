@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+body {
+    background-color: #f1f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+.navbar {
+    background-color: #43a0f0;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.clock-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#live-time {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #050504;
+}
+
+#live-date {
+    font-size: 0.85rem;
+    color: #0d0d0f;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.quote-card {
+    background: #ffffff;
+    border: 3px solid #43a0f0;
+    padding: 20px 24px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+#quote-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #334155;
+    margin-bottom: 6px;
+}
+
+#quote-author {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 650;
+}
+
+.widgets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px #43a0f0;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #43a0f0;
+    padding: 14px 18px;
+    border-bottom: 1px solid #43a0f0
+}
+
+.card-header h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #000000;
+}
+
+.card-body {
+    padding: 18px;
+    flex: 1;
+}
+
+.input-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.input-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+input[type="text"],
+input[type="url"] {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+input:focus {
+    border-color: #43a0f0;
+}
+
+button {
+    padding: 10px 16px;
+    background-color: #43a0f0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #548dc0;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8fafc;
+    border: 1px solid #f1f5f9;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+#notes-list .item {
+    background-color: #fef9c3;
+    border-color: #fef08a;
+    color: #713f12;
+}
+
+.item.completed span {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+.item .todo-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item a {
+    color: #43a0f0;
+    text-decoration: none;
+    font-weight: 500;
+    word-break: break-all;
+}
+
+.item a:hover {
+    text-decoration: underline;
+}
+
+.del-btn {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 2px 6px;
+}
+
+.del-btn:hover {
+    color: #ef4444;
+    background: none;
+}
+
+
+/* Align items in navbar right */
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* Adjust card header to space out title and clear button */
+
+.card-header {
+    background-color: #f8fafc;
+    padding: 12px 18px;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-widget-clear {
+    background: transparent;
+    color: #94a3b8;
+    border: 1px solid #e2e8f0;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-widget-clear:hover {
+    background: #fee2e2;
+    color: #ef4444;
+    border-color: #fecaca;
+}
+
+.btn-clear-all {
+    background-color: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fca5a5;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-clear-all:hover {
+    background-color: #ef4444;
+    color: #ffffff;
+}
