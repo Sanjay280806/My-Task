@@ -1,4 +1,3 @@
-// --- 1. Live Clock & Date ---
 function updateClock() {
     const now = new Date();
     let hours = now.getHours();
@@ -14,8 +13,6 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
-
-// --- 2. Quote of the Day (Online Fetch) ---
 const quoteText = document.getElementById("quote-text");
 
 function fetchDailyQuote() {
@@ -38,12 +35,11 @@ function fetchDailyQuote() {
 fetchDailyQuote();
 
 
-// --- 3. Sticky Notes ---
 const noteInput = document.getElementById('note-input');
 const addNoteBtn = document.getElementById('add-note-btn');
 const notesList = document.getElementById('notes-list');
 
-let notes = JSON.parse(localStorage.getItem('my_space_notes')) || ['Welcome to notes!'];
+let notes = JSON.parse(localStorage.getItem('my_space_notes'))
 
 function renderNotes() {
     notesList.innerHTML = '';
@@ -84,15 +80,11 @@ addNoteBtn.addEventListener('click', addNote);
 noteInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') addNote(); });
 renderNotes();
 
-
-// --- 4. To-Do List ---
 const todoInput = document.getElementById('todo-input');
 const addTodoBtn = document.getElementById('add-todo-btn');
 const todoList = document.getElementById('todo-list');
 
-let todos = JSON.parse(localStorage.getItem('my_space_todos')) || [
-    { text: 'Plan tomorrow’s goals', completed: false }
-];
+let todos = JSON.parse(localStorage.getItem('my_space_todos'))
 
 function renderTodos() {
     todoList.innerHTML = '';
@@ -141,16 +133,12 @@ addTodoBtn.addEventListener('click', addTodo);
 todoInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') addTodo(); });
 renderTodos();
 
-
-// --- 5. Bookmarks Manager ---
 const bmTitleInput = document.getElementById('bm-title');
 const bmUrlInput = document.getElementById('bm-url');
 const addBmBtn = document.getElementById('add-bm-btn');
 const bookmarksList = document.getElementById('bookmarks-list');
 
-let bookmarks = JSON.parse(localStorage.getItem('my_space_bookmarks')) || [
-    { title: 'Google', url: 'https://google.com' }
-];
+let bookmarks = JSON.parse(localStorage.getItem('my_space_bookmarks'))
 
 function renderBookmarks() {
     bookmarksList.innerHTML = '';
