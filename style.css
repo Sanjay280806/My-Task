@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
@@ -86,12 +86,6 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-}
-
-.card-header {
-    background-color: #43a0f0;
-    padding: 14px 18px;
-    border-bottom: 1px solid #43a0f0
 }
 
 .card-header h2 {
@@ -222,7 +216,7 @@ button:hover {
 /* Adjust card header to space out title and clear button */
 
 .card-header {
-    background-color: #f8fafc;
+    background-color: #43a0f0;
     padding: 12px 18px;
     border-bottom: 1px solid #e2e8f0;
     display: flex;
