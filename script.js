@@ -39,7 +39,7 @@ const noteInput = document.getElementById('note-input');
 const addNoteBtn = document.getElementById('add-note-btn');
 const notesList = document.getElementById('notes-list');
 
-let notes = JSON.parse(localStorage.getItem('my_space_notes'))
+let notes = JSON.parse(localStorage.getItem('my_space_notes')) || [];
 
 function renderNotes() {
     notesList.innerHTML = '';
@@ -84,7 +84,7 @@ const todoInput = document.getElementById('todo-input');
 const addTodoBtn = document.getElementById('add-todo-btn');
 const todoList = document.getElementById('todo-list');
 
-let todos = JSON.parse(localStorage.getItem('my_space_todos'))
+let todos = JSON.parse(localStorage.getItem('my_space_todos')) || [];
 
 function renderTodos() {
     todoList.innerHTML = '';
@@ -138,7 +138,7 @@ const bmUrlInput = document.getElementById('bm-url');
 const addBmBtn = document.getElementById('add-bm-btn');
 const bookmarksList = document.getElementById('bookmarks-list');
 
-let bookmarks = JSON.parse(localStorage.getItem('my_space_bookmarks'))
+let bookmarks = JSON.parse(localStorage.getItem('my_space_bookmarks')) || [];
 
 function renderBookmarks() {
     bookmarksList.innerHTML = '';
